@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Wrench, Landmark, Award, Users } from 'lucide-react';
 
 export default function JourneySection() {
