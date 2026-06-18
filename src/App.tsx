@@ -2,6 +2,7 @@ import React from 'react';
  // Adjust path as needed
 import HeroSection from './pages/HeroSection';
 import EventsSection from './pages/EventsSection';
+import JourneySection from './pages/JourneySection';
 
 export default function App() {
   return (
@@ -17,6 +18,9 @@ export default function App() {
         {/* Wrap EventsSection in a div with an ID so we can scroll to it */}
         <div id="events">
           <EventsSection />
+        </div>
+        <div id="journey">
+          <JourneySection />
         </div>
       </main>
 
