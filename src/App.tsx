@@ -1,21 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Global Layout Component
-
-// The 7 Pages
-import HeroSection from './pages/HeroSection.tsx';
+ // Adjust path as needed
+import HeroSection from './pages/HeroSection';
+import EventsSection from './pages/EventsSection';
 
 export default function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-[#050505] selection:bg-[#ff4b4b]/30">
+    // Add scroll-smooth here to enable smooth scrolling globally
+    <div className="min-h-screen bg-[#050505] selection:bg-[#ff4b4b]/30 scroll-smooth">
+    
 
-        <Routes>
-          <Route path="/" element={<HeroSection/>} />
-          
-        </Routes>
-      </div>
-    </Router>
+      {/* Main Content Sections */}
+      <main>
+        {/* We don't need an ID for Hero, it's at the top */}
+        <HeroSection />
+
+        {/* Wrap EventsSection in a div with an ID so we can scroll to it */}
+        <div id="events">
+          <EventsSection />
+        </div>
+      </main>
+
+    </div>
   );
 }
