@@ -7,6 +7,8 @@ import WhatIsSection from './pages/WhatIsSection';
 import CategoriesSection from './pages/CategoriesSection';
 import DisciplinesSection from './pages/DisciplinesSection';
 import BenefitsSection from './pages/BenifitsSection';
+import EcosystemSection from './pages/EcosystemSection';
+import FooterSection from './pages/FooterSection';
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
         <div id="categories"><CategoriesSection /></div>
         <div id="disciplines"><DisciplinesSection /></div>
         <div id="benefits"><BenefitsSection /></div>
+        <div id="ecosystem"><EcosystemSection/></div>
+        <div id="footer"><FooterSection/></div>
         
       </main>
     </div>

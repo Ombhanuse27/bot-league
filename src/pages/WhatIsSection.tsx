@@ -1,5 +1,4 @@
 import React from 'react';
-import { Settings, Monitor, BrainCircuit, Network, LayoutTemplate, Cpu } from 'lucide-react';
 
 export default function WhatIsSection() {
   const features = [
@@ -28,7 +27,7 @@ export default function WhatIsSection() {
   return (
     <section id="about" className="relative bg-[#111111] py-24 font-['Inter',_sans-serif] flex justify-center overflow-hidden border-t border-white/5">
       
-      {/* Main Container - Pink borders completely removed */}
+      {/* Main Container */}
       <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Section Title */}
@@ -55,47 +54,17 @@ export default function WhatIsSection() {
             ))}
           </div>
 
-          {/* ================= RIGHT SIDE: High-Tech Schematic ================= */}
+          {/* ================= RIGHT SIDE: Diagram Image ================= */}
           <div className="w-full lg:w-[40%] flex justify-center lg:justify-end mt-10 lg:mt-0">
-            <div className="relative w-[320px] h-[320px] flex items-center justify-center">
-              
-              {/* Background Connecting Lines (Circuit Board Look) */}
-              <svg className="absolute inset-0 w-full h-full text-gray-600/50" viewBox="0 0 320 320">
-                <path d="M160 160 L100 80 L60 80" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" />
-                <path d="M160 160 L240 90 L270 90" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" />
-                <path d="M160 160 L110 240 L80 240" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" />
-                <path d="M160 160 L240 230 L270 230" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" />
-              </svg>
-
-              {/* Center Core Node */}
-              <div className="absolute z-10 w-[100px] h-[100px] rounded-full border border-gray-500/50 flex items-center justify-center">
-                <div className="w-[70px] h-[70px] rounded-full border border-gray-400 flex items-center justify-center bg-[#181818] shadow-[0_0_20px_rgba(255,255,255,0.05)]">
-                  <BrainCircuit className="w-8 h-8 text-gray-300" strokeWidth={1.5} />
-                </div>
-              </div>
-
-              {/* Orbiting Outer Nodes */}
-              
-              {/* Top Left: UI/Layout Icon */}
-              <div className="absolute top-4 left-4 bg-[#111] p-3 border border-gray-600 rounded-lg">
-                <LayoutTemplate className="w-6 h-6 text-gray-400" strokeWidth={1.5} />
-              </div>
-              
-              {/* Top Right: Gear/Settings */}
-              <div className="absolute top-12 right-2 bg-[#111] p-3 border border-gray-600 rounded-full">
-                <Settings className="w-7 h-7 text-gray-400" strokeWidth={1.5} />
-              </div>
-
-              {/* Bottom Left: Monitor/Laptop */}
-              <div className="absolute bottom-12 left-6 bg-[#111] p-3 border border-gray-600 rounded-md">
-                <Monitor className="w-6 h-6 text-gray-400" strokeWidth={1.5} />
-              </div>
-
-              {/* Bottom Right: Processor/CPU */}
-              <div className="absolute bottom-10 right-6 bg-[#111] p-3 border border-gray-600 rounded-full flex items-center justify-center">
-                <Cpu className="w-6 h-6 text-gray-400" strokeWidth={1.5} />
-              </div>
-
+            {/* Replaced previous absolute-positioned SVG and Icon structure 
+              with a single, contained image asset.
+            */}
+            <div className="w-full max-w-[400px] aspect-square flex items-center justify-center">
+              <img 
+                src="/bot-league.png" // Replace with your actual image path (e.g., /src/assets/schematic.png or /public/schematic.png)
+                alt="BotLeague Schematic Diagram"
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
 
