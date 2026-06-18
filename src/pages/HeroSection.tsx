@@ -1,174 +1,130 @@
 import React from 'react';
 
-export default function EventsSection() {
+export default function HeroSection() {
   return (
-    <section className="relative bg-[#111111] py-20 font-['Inter',_sans-serif] flex justify-center overflow-hidden">
+    <div className="relative w-full h-screen min-h-[800px] bg-[#050505] font-['Inter',_sans-serif] overflow-hidden selection:bg-[#f93b4a]/30">
       
-      {/* Subtle ambient background glow matching the image */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-red-900/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-orange-900/5 rounded-full blur-[100px] pointer-events-none" />
+      {/* --- PERFECTED BACKGROUND ARCHITECTURE --- */}
+      {/* 1. Base Layer: Solid Black for the whole screen */}
+      <div className="absolute inset-0 bg-[#050505] z-0" />
 
-      {/* Main Container */}
-      <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+      {/* 2. Image Layer: Pinned only to the right 75% of the screen */}
+      <div className="absolute top-0 right-0 w-full lg:w-[75%] h-full z-0">
         
-        {/* Section Title */}
-        <h2 className="font-['Orbitron',_sans-serif] text-3xl md:text-4xl font-bold text-white mb-14 tracking-wide uppercase">
-          Competitions & Events
-        </h2>
-
-        {/* 3-Column Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          
-          {/* ================= COLUMN 1: LIVE NOW ================= */}
-          <div className="flex flex-col h-full">
-            <h3 className="font-['Orbitron',_sans-serif] text-[#ff4b4b] text-lg font-bold mb-6 tracking-wide uppercase">
-              Live Now
-            </h3>
-            
-            <div className="bg-[#181818] border border-white/5 rounded-lg p-6 shadow-2xl flex-1 flex flex-col">
-              {/* Card Header */}
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h4 className="text-white font-bold text-[19px] tracking-wide mb-1">Bengaluru Regionals</h4>
-                  <p className="text-[#888] text-[15px]">Lorem Ipsum</p>
-                </div>
-                <span className="bg-[#ff4b4b] text-white text-[11px] font-bold px-3 py-1.5 rounded uppercase tracking-wider shadow-sm">
-                  Ongoing
-                </span>
-              </div>
-              
-              <div className="w-full h-[1px] bg-white/10 mb-8" />
-
-              {/* Exact CSS Bracket Recreation */}
-              <div className="relative flex-1 flex items-stretch justify-between w-full pr-2 min-h-[220px]">
-                
-                {/* Bracket Column 1 (4 boxes) */}
-                <div className="flex flex-col justify-between w-[28%] z-10">
-                  <div className="h-[28px] bg-[#444] rounded w-full shadow-inner" />
-                  <div className="h-[28px] bg-[#444] rounded w-full shadow-inner" />
-                  <div className="h-[28px] bg-[#444] rounded w-full shadow-inner" />
-                  <div className="h-[28px] bg-[#444] rounded w-full shadow-inner" />
-                </div>
-
-                {/* Bracket Connecting Lines 1 (Left to Middle) */}
-                <div className="absolute left-[28%] w-[20%] h-full flex flex-col justify-around py-[14px] z-0">
-                  <div className="h-[34%] border-t border-r border-b border-[#ff4b4b]" />
-                  <div className="h-[34%] border-t border-r border-b border-[#ff4b4b]" />
-                </div>
-
-                {/* Bracket Column 2 (2 boxes) */}
-                <div className="flex flex-col justify-around w-[28%] z-10">
-                  <div className="h-[28px] bg-[#444] rounded w-full shadow-inner" />
-                  <div className="h-[28px] bg-[#444] rounded w-full shadow-inner" />
-                </div>
-
-                {/* Bracket Connecting Lines 2 (Middle to Right) */}
-                <div className="absolute left-[76%] w-[12%] h-full flex flex-col justify-center py-[14px] z-0">
-                  <div className="h-[50%] border-t border-r border-b border-[#ff4b4b]" />
-                </div>
-
-                {/* Bracket Final Column (1 box) */}
-                <div className="flex flex-col justify-center w-[28%] z-10 ml-3">
-                  <div className="h-[28px] bg-[#444] rounded w-full shadow-inner relative z-10" />
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-
-          {/* ================= COLUMN 2: UPCOMING ================= */}
-          <div className="flex flex-col h-full">
-            <h3 className="font-['Orbitron',_sans-serif] text-white text-lg font-bold mb-6 tracking-wide uppercase">
-              Upcoming
-            </h3>
-            
-            <div className="flex flex-col gap-6 flex-1">
-              
-              {/* Event Card 1 */}
-              <div className="bg-[#181818] border border-white/5 rounded-lg p-6 shadow-2xl flex-1 flex flex-col justify-between">
-                <div>
-                  <h4 className="text-white font-bold text-[19px] mb-6 tracking-wide">Event in Mumbai</h4>
-                  
-                  <div className="grid grid-cols-3 gap-2 mb-8">
-                    <div>
-                      <p className="text-white text-[13px] font-semibold mb-1">Date</p>
-                      <p className="text-[#dddddd] text-[13px]">11/11/25</p>
-                    </div>
-                    <div>
-                      <p className="text-white text-[13px] font-semibold mb-1">Location</p>
-                      <p className="text-[#dddddd] text-[13px]">BKC</p>
-                    </div>
-                    <div>
-                      <p className="text-white text-[13px] font-semibold mb-1">Category</p>
-                      <p className="text-[#dddddd] text-[13px]">Lorem</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full py-3 bg-[#ff4b4b] text-white text-[15px] font-bold rounded hover:bg-red-500 transition-colors tracking-wide">
-                  REGISTER
-                </button>
-              </div>
-
-              {/* Event Card 2 */}
-              <div className="bg-[#181818] border border-white/5 rounded-lg p-6 shadow-2xl flex-1 flex flex-col justify-between">
-                <div>
-                  <h4 className="text-white font-bold text-[19px] mb-6 tracking-wide">Event in Delhi</h4>
-                  
-                  <div className="grid grid-cols-3 gap-2 mb-8">
-                    <div>
-                      <p className="text-white text-[13px] font-semibold mb-1">Date</p>
-                      <p className="text-[#dddddd] text-[13px]">11/11/25</p>
-                    </div>
-                    <div>
-                      <p className="text-white text-[13px] font-semibold mb-1">Location</p>
-                      <p className="text-[#dddddd] text-[13px]">BKC</p>
-                    </div>
-                    <div>
-                      <p className="text-white text-[13px] font-semibold mb-1">Category</p>
-                      <p className="text-[#dddddd] text-[13px]">Lorem</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full py-3 bg-[#ff4b4b] text-white text-[15px] font-bold rounded hover:bg-red-500 transition-colors tracking-wide">
-                  REGISTER
-                </button>
-              </div>
-
-            </div>
-          </div>
-
-
-          {/* ================= COLUMN 3: PAST RESULTS ================= */}
-          <div className="flex flex-col h-full">
-            <h3 className="font-['Orbitron',_sans-serif] text-white text-lg font-bold mb-6 tracking-wide uppercase">
-              Past Results
-            </h3>
-            
-            <div className="bg-[#181818] border border-white/5 rounded-lg p-6 shadow-2xl flex-1 flex flex-col">
-              
-              <div className="border-b border-white/10 pb-5 mb-5 mt-2">
-                <h4 className="text-white font-bold text-[19px] tracking-wide mb-1.5">Bengaluru Regionals</h4>
-                <p className="text-[#888] text-[15px]">Lorem Ipsum</p>
-              </div>
-
-              <div className="border-b border-white/10 pb-5 mb-5 mt-1">
-                <h4 className="text-white font-bold text-[19px] tracking-wide mb-1.5">Bengaluru Regionals</h4>
-                <p className="text-[#888] text-[15px]">Lorem Ipsum</p>
-              </div>
-
-              <div className="mt-1">
-                <h4 className="text-white font-bold text-[19px] tracking-wide mb-1.5">Bengaluru Regionals</h4>
-                <p className="text-[#888] text-[15px]">Lorem Ipsum</p>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
+        {/* The actual image */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            // Replace with your local path: url('/hero-bg.jpg')
+            backgroundImage: `url('/hero-bg.png')`, 
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        
+        {/* 3. The Blend Mask: A tight gradient ONLY on the left edge of the image 
+               to blend it seamlessly into the solid black base layer.
+               The rest of the image (right side) remains 100% bright and clear. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#050505] from-0% via-[#050505]/80 via-[10%] to-transparent to-[30%]" />
       </div>
-    </section>
+
+
+      {/* --- NAVBAR --- */}
+      <nav className="relative z-20 w-full px-8 lg:px-12 py-5 flex items-center justify-between bg-[#111111] border-b border-white/5">
+        
+        {/* Logo Container */}
+        <div className="flex items-center cursor-pointer">
+          <div className="relative flex items-center font-['Orbitron',_sans-serif] italic pr-4">
+            <div className="absolute -left-2 top-0 w-0 h-0 border-l-[10px] border-l-transparent border-t-[10px] border-t-yellow-400"></div>
+            
+            <div className="relative">
+              <span className="text-[28px] font-black tracking-tighter text-[#1a73e8]">
+                B<span className="inline-block relative top-[2px] mx-[1px] text-[24px]">⚙</span>T
+              </span>
+              <div className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#1a73e8]"></div>
+            </div>
+            
+            <div className="relative ml-1">
+              <span className="text-[28px] font-black tracking-tighter text-[#ff4b4b]">
+                LEAGUE
+              </span>
+              <div className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#1a73e8]"></div>
+            </div>
+
+            <div className="absolute right-0 bottom-1 w-0 h-0 border-r-[10px] border-r-transparent border-b-[10px] border-b-yellow-400"></div>
+          </div>
+        </div>
+
+        {/* Desktop Links */}
+        <div className="hidden lg:flex items-center space-x-14">
+          
+          {/* ACTIVE LINK: Events */}
+          <div className="relative flex flex-col justify-center">
+            {/* UPDATED: href="#events" */}
+            <a href="#events" className="font-['Michroma',_sans-serif] text-white text-[14px] tracking-wide">
+              Events
+            </a>
+            {/* The precise red active underline. 
+                -bottom-[21px] pushes it perfectly to the bottom edge of the nav bar 
+                (adjust slightly if your nav height differs in your actual build) */}
+            <div className="absolute -bottom-[21px] left-0 w-full h-[3px] bg-[#ff4b4b]" />
+          </div>
+
+          {/* INACTIVE LINKS */}
+          {/* UPDATED: href targets added for scrolling */}
+          <a href="#programs" className="font-['Michroma',_sans-serif] text-gray-200 hover:text-[#ff4b4b] text-[14px] transition-colors tracking-wide">Programs</a>
+          <a href="#community" className="font-['Michroma',_sans-serif] text-gray-200 hover:text-[#ff4b4b] text-[14px] transition-colors tracking-wide">Community</a>
+          <a href="#ranks" className="font-['Michroma',_sans-serif] text-gray-200 hover:text-[#ff4b4b] text-[14px] transition-colors tracking-wide">Ranks</a>
+        </div>
+
+        {/* Auth Buttons */}
+        <div className="hidden sm:flex items-center gap-4">
+          <button className="px-6 py-2 text-[14px] font-semibold text-white border border-gray-400 rounded-md hover:bg-white/10 transition-colors font-['Inter',_sans-serif] bg-transparent">
+            LOGIN
+          </button>
+          <button className="px-6 py-2 text-[14px] font-bold text-white bg-[#ff4b4b] rounded-md hover:bg-red-500 transition-colors font-['Inter',_sans-serif] border border-transparent shadow-[0_2px_10px_rgba(255,75,75,0.2)]">
+            REGISTER NOW
+          </button>
+        </div>
+      </nav>
+
+      {/* --- MAIN HERO CONTENT --- */}
+      <main className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16 h-[calc(100%-85px)] flex flex-col justify-center">
+        
+        <div className="absolute top-12 right-8 lg:right-16 bg-[#111111]/90 border border-white/10 rounded-md px-4 py-2.5 flex items-center gap-3 backdrop-blur-md shadow-xl">
+          <div className="flex items-center gap-2 text-[12px] font-semibold text-white tracking-wider">
+            <div className="w-2 h-2 rounded-full bg-[#f93b4a] animate-pulse shadow-[0_0_8px_#f93b4a]" />
+            LIVE : Episode 14 . Bengaluru Regionals
+          </div>
+          <a href="#" className="text-[#f93b4a] text-[12px] font-bold hover:text-red-400 transition-colors tracking-wider ml-2">
+            WATCH LIVE
+          </a>
+        </div>
+
+        <div className="max-w-[700px] -mt-10">
+          <h1 className="font-['Orbitron',_sans-serif] text-[52px] lg:text-[72px] font-bold text-white uppercase leading-[1.05] tracking-wider mb-6 drop-shadow-2xl">
+            India's Ultimate<br />
+            Robotics Arena
+          </h1>
+          
+          <p className="font-['Inter',_sans-serif] text-[19px] text-gray-300 mb-10 max-w-[500px] leading-[1.5] tracking-wide">
+            Build.Compete.Rank.The National<br />
+            Ecosystem for Robotics Arena
+          </p>
+          
+          <div className="flex flex-wrap items-center gap-4">
+            <button className="px-8 py-3.5 text-[14px] font-bold text-white bg-[#f93b4a] hover:bg-[#d62828] rounded-[4px] transition-colors tracking-wider shadow-[0_4px_14px_rgba(249,59,74,0.4)]">
+              CREATE ACCOUNT
+            </button>
+            {/* UPDATED: href="#events" added to the Explore Events button */}
+            <a href="#events" className="px-8 py-3.5 text-[14px] font-bold text-white border border-gray-500 hover:bg-white/10 hover:border-white rounded-[4px] transition-all backdrop-blur-sm tracking-wider bg-black/20">
+              EXPLORE EVENTS
+            </a>
+          </div>
+        </div>
+      </main>
+
+    </div>
   );
 }
