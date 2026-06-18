@@ -1,5 +1,4 @@
-import React from 'react';
-import { Award, Gavel, Briefcase, Zap, Trophy, User } from 'lucide-react';
+import { Award, Gavel, Briefcase, Zap, } from 'lucide-react';
 
 export default function BenefitsSection() {
   const benefits = [
@@ -11,7 +10,7 @@ export default function BenefitsSection() {
 
   return (
     <section className="bg-[#0a0a0a] py-24 text-white flex justify-center">
-      <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="w-full max-w-[1300px] mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
         
         {/* Left: Text Benefits */}
         <div>
@@ -32,36 +31,12 @@ export default function BenefitsSection() {
         </div>
 
         {/* Right: Leaderboard Card */}
-        <div className="bg-[#111] border border-white/10 rounded-2xl p-6 w-full max-w-[400px] mx-auto shadow-2xl relative overflow-hidden">
-          <div className="text-center mb-6">
-            <h3 className="font-['Orbitron',_sans-serif] text-xl font-bold tracking-widest">LEADERBOARD</h3>
-          </div>
-          
-          {/* Top User */}
-          <div className="bg-[#1a1a1a] p-4 rounded-xl border border-white/5 text-center mb-6">
-            <div className="w-16 h-16 bg-[#ffce00] rounded-full mx-auto mb-2 flex items-center justify-center text-black">
-              <User size={32} />
-            </div>
-            <p className="font-bold text-sm">#01 - Player Name</p>
-            <p className="text-2xl font-bold text-[#ffce00]">508754</p>
-          </div>
-
-          {/* List */}
-          <div className="space-y-3">
-            {[2, 3, 4, 5, 6, 7, 8].map((num) => (
-              <div key={num} className="flex items-center justify-between bg-[#1a1a1a] p-3 rounded-lg border border-white/5">
-                <span className="font-mono text-gray-400 w-8">0{num}</span>
-                <div className="flex items-center gap-3 flex-1">
-                  <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
-                    <User size={16} />
-                  </div>
-                  <span className="text-sm">Player Name</span>
-                </div>
-                <span className="text-sm font-bold">22000</span>
-                <Trophy size={16} className="text-[#ff4b4b] ml-3" />
-              </div>
-            ))}
-          </div>
+        <div className="w-full max-w-[600px] mx-auto flex lg:justify-end">
+          <img 
+            src="/leaderboard.png" 
+            alt="League Leaderboard"
+            className="w-full h-auto object-contain rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+          />
         </div>
 
       </div>

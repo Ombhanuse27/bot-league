@@ -1,4 +1,3 @@
-import React from 'react';
 import { Lightbulb, UserCog, Brain, Blocks, ArrowRight } from 'lucide-react';
 
 export default function CategoriesSection() {
@@ -8,7 +7,7 @@ export default function CategoriesSection() {
       title: "MINI\nMAKERS",
       desc: "Where Creativity Meets Logic.",
       icon: Blocks,
-      // The first card in your image has a slightly active/hover state
+
       isActive: true 
     },
     {

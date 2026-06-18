@@ -1,5 +1,3 @@
-import React from 'react';
- // Adjust path as needed
 import HeroSection from './pages/HeroSection';
 import EventsSection from './pages/EventsSection';
 import JourneySection from './pages/JourneySection';
@@ -9,10 +7,13 @@ import DisciplinesSection from './pages/DisciplinesSection';
 import BenefitsSection from './pages/BenifitsSection';
 import EcosystemSection from './pages/EcosystemSection';
 import FooterSection from './pages/FooterSection';
+import Navbar from './pages/Navbar';
 
 export default function App() {
-  return (
-    <div className="min-h-screen bg-[#050505] selection:bg-[#ff4b4b]/30 scroll-smooth">
+ return (
+    <div className="min-h-screen bg-[#050505] selection:bg-[#ff4b4b]/30 scroll-smooth pt-[85px]">       
+      <Navbar />
+
       <main>
         <HeroSection />
         <div id="events"><EventsSection /></div>
@@ -22,8 +23,7 @@ export default function App() {
         <div id="disciplines"><DisciplinesSection /></div>
         <div id="benefits"><BenefitsSection /></div>
         <div id="ecosystem"><EcosystemSection/></div>
-        <div id="footer"><FooterSection/></div>
-        
+        <FooterSection />
       </main>
     </div>
   );

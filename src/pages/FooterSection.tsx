@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 export default function FooterSection() {
@@ -29,12 +28,10 @@ export default function FooterSection() {
                         ].map((s, i) => (
                             <div key={i} className="flex items-center gap-4">
                                 <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center">
-                                    {/* Replace src with your actual sponsor logo paths */}
                                     <img
                                         src={s.img}
                                         alt={s.name}
-                                        // Removed 'w-full h-full' if logos are rectangular to prevent distortion
-                                        // Use 'max-h-full max-w-full' to ensure they fit perfectly
+                                       
                                         className="max-h-full max-w-full object-contain filter brightness-0 invert"
                                     />
                                 </div>
@@ -46,10 +43,9 @@ export default function FooterSection() {
 
                 <hr className="border-white/10 mb-12" />
 
-                {/* Footer Links & Socials */}
                 <div className="flex flex-col md:flex-row justify-between gap-12">
 
-                    {/* Quick Links Grid */}
+
                     <div className="grid grid-cols-2 gap-x-20 gap-y-4">
                         {quickLinks.flat().map((link) => (
                             <a key={link} href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
@@ -58,7 +54,6 @@ export default function FooterSection() {
                         ))}
                     </div>
 
-                    {/* Social Media */}
                     <div>
                         <h4 className="font-bold mb-6 text-sm tracking-wider uppercase">Social Media</h4>
                         <div className="flex gap-6 text-gray-400">
